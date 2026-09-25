@@ -41,6 +41,8 @@ Reading a lab switch and changing a production core router are not the same oper
 | **Keep people in control** | Make room for explicit allow, hold-for-approval, and deny decisions under operator-defined policy. |
 | **Leave verifiable evidence** | Make decisions explainable and auditable, while reducing exposure of sensitive device output. |
 
+> **The parts that keep you safe stay open.** Anything that decides what's allowed, or proves what happened, is Apache-2.0 and always will be. A paid edition for teams adds scale and integrations; see [how it's funded](https://github.com/fathomgate/fathomgate/blob/main/ROADMAP.md#open-source-and-how-its-funded).
+
 The proxy already connects these components; the policy controls above are being added in stages:
 
 ```text

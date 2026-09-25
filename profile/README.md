@@ -8,8 +8,8 @@
 <h3 align="center">Safe passage for AI on your network.</h3>
 
 <p align="center">
-  Network-aware policy enforcement for AI-driven operations.<br>
-  <strong>AI can act. Your rules decide how.</strong>
+  Building a network-aware policy checkpoint for AI-driven operations.<br>
+  Open source, with policy grounded in network commands and device roles.
 </p>
 
 <p align="center">
@@ -18,6 +18,10 @@
   <a href="https://github.com/fathomgate/fathomgate/blob/main/ROADMAP.md">Roadmap</a> &nbsp;·&nbsp;
   <a href="https://github.com/fathomgate/fathomgate/blob/main/CONTRIBUTING.md">Contribute</a>
 </p>
+
+<!-- Maintainer: update this release status when the enforcement milestone ships. -->
+> [!IMPORTANT]
+> **Current release: [v0.1.0 — pass-through preview](https://github.com/fathomgate/fathomgate/releases/tag/v0.1.0).** The live proxy forwards tool calls without policy enforcement, approvals, response redaction or decision audit logging. Evaluate it in a lab with read-only device credentials. The standalone policy evaluator and redaction tools are available today; see the [roadmap](https://github.com/fathomgate/fathomgate/blob/main/ROADMAP.md) for planned protections.
 
 ---
 
@@ -29,7 +33,7 @@ Reading a lab switch and changing a production core router are not the same oper
 
 **Our mission:** enable organizations to use AI on critical infrastructure without surrendering control.
 
-## The control model
+## The planned control model
 
 | Design priority | What it means |
 | --- | --- |
@@ -37,7 +41,7 @@ Reading a lab switch and changing a production core router are not the same oper
 | **Keep people in control** | Make room for explicit allow, hold-for-approval, and deny decisions under operator-defined policy. |
 | **Leave verifiable evidence** | Make decisions explainable and auditable, while reducing exposure of sensitive device output. |
 
-Target architecture:
+The proxy already connects these components; the policy controls above are being added in stages:
 
 ```text
 AI assistant → Fathomgate → Network MCP server → Infrastructure
@@ -47,15 +51,17 @@ AI assistant → Fathomgate → Network MCP server → Infrastructure
 
 The **[core repository](https://github.com/fathomgate/fathomgate)** is the starting point for the code, policy examples, architecture, and development roadmap.
 
-[Try the policy engine](https://github.com/fathomgate/fathomgate#try-it) · [Installation guide](https://github.com/fathomgate/fathomgate/blob/main/docs/install.md) · [Contribution guide](https://github.com/fathomgate/fathomgate/blob/main/CONTRIBUTING.md)
-
-<!-- Maintainer: this status reflects the main repository README reviewed on 2026-09-25. Update it when the enforcement milestone ships. -->
-> [!IMPORTANT]
-> **Early development.** Policy evaluation and several supporting components can be tested today. The live proxy (`fathomgate serve`) currently passes requests through unchanged and must not be relied on as a policy enforcement boundary. See the [project README](https://github.com/fathomgate/fathomgate#where-it-is-today) and [roadmap](https://github.com/fathomgate/fathomgate/blob/main/ROADMAP.md) for current capabilities and planned work.
+[Download the preview](https://github.com/fathomgate/fathomgate/releases/tag/v0.1.0) · [Try an offline policy evaluation](https://github.com/fathomgate/fathomgate#try-it) · [Installation and verification](https://github.com/fathomgate/fathomgate/blob/main/docs/install.md)
 
 ## Build with us
 
-We welcome network engineers, automation teams, security practitioners, and MCP developers. Help shape real-world policy examples, server profiles, testing, documentation, and operational requirements through the [contribution guide](https://github.com/fathomgate/fathomgate/blob/main/CONTRIBUTING.md).
+Network engineers, automation teams, security practitioners and MCP developers can help without writing Go:
+
+- Describe the tools in an MCP server you use so they can be classified in a server profile.
+- Share a policy example for how your team operates.
+- Try the preview in a lab and report what was confusing or failed.
+
+Start with the [contribution guide](https://github.com/fathomgate/fathomgate/blob/main/CONTRIBUTING.md) or a [good first issue](https://github.com/fathomgate/fathomgate/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22). For vulnerabilities, use the [private reporting process](https://github.com/fathomgate/fathomgate/security/advisories/new).
 
 <p align="center">
   <sub>Open-source core · <a href="https://github.com/fathomgate/fathomgate/blob/main/LICENSE">Apache License 2.0</a> · Built around network operations</sub>
